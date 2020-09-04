@@ -1,0 +1,41 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="crabContainer">
+        <at-toast compid="{{$compid__477}}"></at-toast>
+        <image class="crabBg" src="{{IMG_BASE_URL + '/crab/bg_crab.png'}}"></image>
+        <view class="crabUsed" bindtap="anonymousFunc1">使用规则</view>
+        <image class="crabPlate" src="{{IMG_BASE_URL + '/crab/bg_crab_plate.png'}}"></image>
+        <image class="crabTitle" src="{{IMG_BASE_URL + '/crab/bg_crab_tip.png'}}"></image>
+        <view class="crabContent">
+            <image class="crabBag" src="{{IMG_BASE_URL + '/crab/bg_crab_bag.png'}}"></image>
+            <image class="crabLeftMoney" src="{{IMG_BASE_URL + '/crab/bg_crab_left_money.png'}}"></image>
+            <image class="crabRightMoney" src="{{IMG_BASE_URL + '/crab/bg_crab_right_money.png'}}"></image>
+            <image class="topRibbon" src="{{IMG_BASE_URL + '/crab/bg_crab_top_ribbon.png.png'}}"></image>
+            <image class="bottomRibbon" src="{{IMG_BASE_URL + '/crab/bg_crab_bottom_ribbon.png.png'}}"></image>
+            <image class="rightRibbon" src="{{IMG_BASE_URL + '/crab/bg_crab_left_ribbon.png'}}"></image>
+            <image class="leftRibbon" src="{{IMG_BASE_URL + '/crab/bg_crab_right_ribbon.png'}}"></image>
+            <image class="leftTicket" src="{{IMG_BASE_URL + '/crab/bg_crab_left_ticket.png.png'}}"></image>
+            <image class="rightTicket" src="{{IMG_BASE_URL + '/crab/bg_crab_right_ticket.png'}}"></image>
+            <image class="bottomTicket" src="{{IMG_BASE_URL + '/crab/bg_crab_bottom_ticket.png'}}"></image>
+            <image class="crabOpen" bindtap="anonymousFunc2" src="{{IMG_BASE_URL + '/crab/bg_crab_open.png'}}"></image>
+        </view>
+        <block wx:if="{{isShow}}">
+            <page-alert compid="{{$compid__478}}">
+                <view class="usedTitle">一、寄件规则：</view>
+                <view class="usedTitle">1、寄件地区要求：仅在江苏地区才可使用</view>
+                <view class="usedTitle">2、收件地区要求：</view>
+                <view class="usedTitle"><text class="usedCaption">大闸蟹专运券：</text>适用于收方地址在江苏、浙江、上海、安徽等地区；</view>
+                <view class="usedTitle"><text class="usedCaption">大闸蟹空运券：</text>适用于收方地址不在江苏、浙江、上海、安徽等地区；</view>
+                <view class="usedTitle">二、使用规则：</view>
+                <view class="usedTitle">1、运费付款方式必须是寄付</view>
+                <view class="usedTitle">2、一张奖券仅能使用在一个运单，一个运单仅能使用一张奖券</view>
+                <view class="usedTitle">3、奖券仅抵扣运单运费（不包含增值服务费）</view>
+                <view class="usedTitle">4、奖券不可赠与他人、不可转让、不找零</view>
+                <view class="usedTitle">三、退还规则：</view>
+                <view class="usedTitle">1、下单后司机还未取货，主动取消订单，优惠券自动退回原账户</view>
+                <view class="usedTitle">2、下单使用优惠券24小时后司机还未取货，优惠券自动退回原账户</view>
+                <view class="usedTitle">3、核销优惠券时如运单信息不满足条件，优惠券退回原账户</view>
+                <view class="usedTitle">4、优惠券核销后如出现反核销，运单信息不满足优惠券使用条件，优惠券退回原账户</view>
+            </page-alert>
+        </block>
+    </view>
+</block>

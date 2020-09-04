@@ -1,0 +1,16 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="page__container">
+        <view class="page__header">
+            <image mode="widthFix" class="w_full" src="{{IMG_BASE_URL + '/midAutumn/activity_zq_header.png'}}"></image>
+        </view>
+        <view class="kye__body p_r">
+            <image class="body_img w_full" mode="widthFix" src="{{IMG_BASE_URL + '/midAutumn/activity_zq_content.png'}}"></image>
+            <view class="kye__content p_a">
+                <image mode="widthFix" class="content_title" src="{{IMG_BASE_URL + '/midAutumn/activity_zq_title.png'}}"></image><text selectable="{{true}}"><text class="kye_p kye_p_first">亲爱的跨越伙伴们、朋友们：</text><text class="kye_p">中秋逢国庆，家和国运兴。值此佳节来临，举国欢庆之际，我代表跨越速运集团向各位致以节日的问候和美好的祝愿。</text><text class="kye_p">一直以来，跨越速运用汗水浇灌收获，以实干砥砺前行，通过技术与业务完美融合，以科技赋能催生新的发展活力。</text><text class="kye_p">历经13年磨砺，跨越速运已经成长为能够在困难时向国家主动贡献力量的企业。</text><text class="kye_p">未来，跨越速运愿与各位共荣共赢，于危机中育新机，于变局中开新局，用匠心做好产品，用诚心服务客户，广开市场，再创辉煌，一起迎接跨越更好的未来！</text><text class="kye_p">最后再次祝愿大家佳节快乐，阖家幸福！</text></text>
+            </view>
+        </view>
+        <view class="kye__footer t_a_c m_t_14">
+            <image mode="widthFix" class="footer_img" src="{{IMG_BASE_URL + '/midAutumn/activity_zq_footer.png'}}"></image>
+        </view>
+    </view>
+</block>
