@@ -4,9 +4,9 @@
  * @Date: 2020/9/3
  */
 const fs = require('fs');
-const {readFile} = require('../utils/fsPromise');
+const {readFile} = require('../../utils/fsPromise');
 const glob = require('glob');
-const parse_utils = require('../utils/parse')
+const parse_utils = require('../../utils/parse')
 
 /**
  * 读取单个文件路径 TODO 弃用，改用{readFile} = fsPromise
@@ -52,10 +52,13 @@ const readFromPatterns = ({pattern , options = {} , callback}) => {
  * @param lang
  * @returns {Promise<string>}
  */
-const getFileString = async({path,lang})=>{
+const getFileString = async({path,lang='cn'})=>{
   let result = (await readFile(path)).toString()
   if(lang === 'cn'){
     result = parse_utils.getFontChinese(result)
+  }
+  if(lang === 'en'){
+    result = parse_utils.getFontEn(result)
   }
   return result
 }
@@ -66,7 +69,7 @@ const getFileString = async({path,lang})=>{
  * @param callback
  * @return {Promise<string>}
  */
-const getFilesString = async ({pattern ,lang='', callback}) => {
+const getFilesString = async ({pattern ,lang='cn', callback}) => {
   let files = await readFromPatterns({pattern});
   let result = '';
   for (let i = 0; i < files.length; i++) {
@@ -74,6 +77,9 @@ const getFilesString = async ({pattern ,lang='', callback}) => {
   }
   if(lang === 'cn'){
     result = parse_utils.getFontChinese(result)
+  }
+  if(lang === 'en'){
+    result = parse_utils.getFontEn(result)
   }
   return result;
 };

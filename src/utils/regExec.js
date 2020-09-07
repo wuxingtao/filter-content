@@ -6,7 +6,9 @@
 
 /* 中文字识别 */
 const chineseReg = /[\u4e00-\u9fa5]/g
+const wordReg = /\w+/g
 
 module.exports = {
-  chineseReg
+  chineseReg,
+  wordReg
 }

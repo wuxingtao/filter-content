@@ -15,6 +15,16 @@ const getFontChinese = (str)=>{
   return ([...new Set(str.match(regList.chineseReg))]).toString()
 }
 
+/**
+ * 根据html字符串解析英文字符及数字
+ * @param str
+ * @returns {string}
+ */
+const getFontEn = (str)=>{
+  return ([...new Set(str.match(regList.wordReg))].toString())
+}
+
 module.exports = {
-  getFontChinese
+  getFontChinese,
+  getFontEn
 }
