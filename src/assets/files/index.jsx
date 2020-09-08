@@ -10,7 +10,7 @@ class VideoPage extends Component {
     }
 
     config = {
-        navigationBarTitleText: '跨越速运',
+        navigationBarTitleText: 'title',
     }
 
     static options = {
