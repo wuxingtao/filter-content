@@ -2,6 +2,7 @@
   "name": "filter-content",
   "version": "0.0.3",
   "description": "filter string from files",
+  "homepage": "https://github.com/wuxingtao/filter-content",
   "main": "index.js",
   "bin": {
     "filter": "./bin/filter.js"
@@ -16,7 +17,9 @@
     "mini",
     "filter",
     "lang",
-    "string"
+    "string",
+    "ttf",
+    "parse"
   ],
   "author": "xingtao",
   "license": "MIT",
@@ -34,5 +37,6 @@
     "@src": "./src",
     "@build": "./build",
     "@utils": "./src/utils"
-  }
+  },
+  "repository": "git@github.com:wuxingtao/filter-content.git"
 }
