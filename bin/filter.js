@@ -12,6 +12,9 @@ program.version(require('../package.json').version)
   // .arguments('<files> [env]')
   .action(function (files , env) {
     console.log(program.files)
+    if(!program.files){
+      return
+    }
     fs_utils.getFilesString({
       pattern: program.files.toString() ,
       lang: 'cn'
