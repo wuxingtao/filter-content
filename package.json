@@ -1,6 +1,6 @@
 {
   "name": "filter-content",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "filter string from files",
   "main": "index.js",
   "bin": {
