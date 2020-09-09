@@ -27,12 +27,16 @@ files string 月,日,千,古,风,流,人,物,故,宫,博,院,藏,苏,轼,主,题
 ```
 or
 ```js
-fs_utils.getFilesString({
-  pattern: path.join(__dirname , '../utils/*.js'),
+const filter = require('filter-content');
+const path = require('path');
+
+filter.getFilesString({
+  pattern: path.join(__dirname , './files/*.jsx'),
   lang:'cn'
 }).then((data)=>{
   console.log('js',data)
 })
+
 ```
 
 ## cli

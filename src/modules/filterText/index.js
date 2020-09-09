@@ -7,6 +7,7 @@ const fs = require('fs');
 const {readFile} = require('../../utils/fsPromise');
 const glob = require('glob');
 const parse_utils = require('../../utils/parse')
+const fontHelp = require('../fontMin');
 
 /**
  * 读取单个文件路径 TODO 弃用，改用{readFile} = fsPromise
@@ -87,5 +88,6 @@ const getFilesString = async ({pattern ,lang='cn', callback}) => {
 module.exports = {
   readFromFile ,
   getFileString,
-  getFilesString
+  getFilesString,
+  fontHelp
 };

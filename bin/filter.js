@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 const {program} = require('commander');
-const fs_utils = require('../src/modules/filterText');
-const fontMin = require('../src/modules/fontMin');
+const filter = require('../src/modules/filterText');
 
 program.version(require('../package.json').version)
   .description('filterText cli program')
@@ -15,16 +14,18 @@ program.version(require('../package.json').version)
     if(!program.files){
       return
     }
-    fs_utils.getFilesString({
+    filter.getFilesString({
       pattern: program.files.toString() ,
       lang: 'cn'
     }).then(data => {
       console.log('files string' , data);
-      fontMin({
-        text:data,
-        src:program.fontPath,
-        dest:program.output
-      });
+      if(program.fontPath){
+        filter.fontHelp({
+          text:data,
+          src:program.fontPath,
+          dest:program.output
+        });
+      }
     });
   })
   .parse(process.argv);
