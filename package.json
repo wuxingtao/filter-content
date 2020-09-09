@@ -1,6 +1,6 @@
 {
   "name": "filter-content",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "filter string from files",
   "homepage": "https://github.com/wuxingtao/filter-content",
   "main": "index.js",
