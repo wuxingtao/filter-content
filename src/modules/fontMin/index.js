@@ -3,7 +3,6 @@
  * @Author: wu xingtgao
  * @Date: 2020/9/3
  */
-require('module-alias/register')
 const Fontmin = require('fontmin');
 const rename = require('gulp-rename');
 

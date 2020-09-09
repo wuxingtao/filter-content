@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-require('module-alias/register');
 const {program} = require('commander');
 const fs_utils = require('../src/modules/filterText');
-const fontMin = require('@src/modules/fontMin');
+const fontMin = require('../src/modules/fontMin');
 
 program.version(require('../package.json').version)
   .description('filterText cli program')
