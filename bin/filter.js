@@ -1,8 +1,9 @@
 #!/usr/bin/env node
+
 require('module-alias/register');
 const {program} = require('commander');
 const fs_utils = require('../src/modules/filterText');
-const fontMini = require('@src/modules/fontMini');
+const fontMin = require('@src/modules/fontMin');
 
 program.version(require('../package.json').version)
   .description('filterText cli program')
@@ -20,7 +21,7 @@ program.version(require('../package.json').version)
       lang: 'cn'
     }).then(data => {
       console.log('files string' , data);
-      fontMini({
+      fontMin({
         text:data,
         src:program.fontPath,
         dest:program.output
